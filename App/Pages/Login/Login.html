@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginPage</title>
+    <!--Css file-->
+    <link rel="stylesheet" href="./Login.css" />
+
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <!--Favİcon-->
+    <link rel="icon" type="image" href="/App/Image/flights.jpg" />
+    <!--Font Awesome Link-->
+  </head>
+  <body>
+    <div class="alert">
+      <span><i class="fa-solid fa-lock"></i></span>
+      <span class="message-delete"> Username or Password is incorrect </span>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="login-container">
+      <form action="" class="login-form">
+        <div>
+          <img
+            class="login-logo"
+            src="https://www.catalca.bel.tr/svg/man.svg"
+            alt="Avatar"
+          />
+        </div>
+
+        <div class="form-container">
+          <label for="uname">Username</label>
+
+          <div class="input-container">
+            <span> <i class="fa-solid fa-user"></i></span>
+            <input
+              class="login-text"
+              type="text"
+              placeholder="Enter Username"
+              id="username"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <label for="psw">Password</label>
+          <div class="input-container">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              class="password"
+              type="password"
+              placeholder="Enter Password"
+              id="userpassword"
+              autocomplete="off"
+              maxlength="16"
+              required
+            />
+          </div>
+
+          <div>
+            <button class="submit-btn" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./LoginData.js"></script>
+  </body>
+</html>

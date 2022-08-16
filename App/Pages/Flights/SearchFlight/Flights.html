@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Flights</title>
+    <!--Css File-->
+    <link rel="stylesheet" href="./Flights.css" />
+    <!--Favİcon-->
+    <link rel="icon" type="image" href="/App/Image/flights.jpg" />
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="myContainer">
+      <div class="container">
+        <div>
+          <nav class="navbar">
+            <img
+              class="logo"
+              src="/App/Image/logom.png"
+              alt="mylogo"
+              onclick="goHome()"
+            />
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-plane-departure"></i>
+                <a href="/App/Pages/Flights/SearchFlight/Flights.html"
+                  >FLİGHTS</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-ticket"></i>
+                <a href="http://127.0.0.1:5500/App/Pages/Tickets/Tickets.html"
+                  >MY TİCKETS</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="/App/Pages/About/About.html">ABOUT</a>
+              </li>
+             
+              <li>
+                <i class="fa fa-fw fa-user"></i>
+                <a class="login">LOGIN</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header">
+          <div class="headerContainer">
+            <div class="headerList">
+              <div class="tab-header">
+                <i class="fa-solid fa-plane-departure"></i>
+                <span> Uçus Ara</span>
+              </div>
+
+              <div class="tab-header">
+                <i class="fa-solid fa-car"></i>
+                <span onclick="AracKirala()">Araç Kiralama</span>
+              </div>
+
+              <div class="tab-header">
+                <i class="fa-solid fa-user-check"></i>
+                <span>Online Check-İn</span>
+              </div>
+
+              <div class="tab-header">
+                <i class="fa-solid fa-bed"></i>
+                <span onclick="hotelBul()">Hotel Bul </span>
+              </div>
+            </div>
+
+            <div class="headerSearch">
+              <div class="searchFlight">
+                <i class="fa-solid fa-plane-departure"></i>
+                <input
+                  
+                  id="nereden"
+                  type="text"
+                  placeholder="Nereden"
+                  class="searchİnput"
+                  required
+                />
+              </div>
+
+              <div class="searchFlight">
+                <i class="fa-solid fa-plane-arrival"></i>
+                <input
+                
+                  id="nereye"
+                  type="text"
+                  placeholder="Nereye"
+                  class="searchİnput"
+                  required
+                />
+              </div>
+
+              <div class="searchFlight">
+                <input
+                  id="tarih"
+                  type="date"
+                  class="searchİnput"
+                  value="2022-08-10"
+                  min="2022-08-10"
+                  max="2022-12-31"
+                />
+
+                />
+              </div>
+
+              <div class="searchFlight">
+                <button class="searchButton">Uçus Ara</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tickets"></div>
+
+        <div class="homeContainer">
+          <!-- <h2>Popular places</h2> -->
+          <span class="flightCompanyTitle">
+            <h2>Popular Places <i class="fa-solid fa-earth-europe"></i></h2>
+          </span>
+          <div class="places-to-go">
+            
+            <div class="places">
+              <div class="places-title">
+                <h1>İstanbul</h1>
+              </div>
+
+              <img
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/54/be/42/hagia-sophia-museum-by.jpg?w=600&h=400&s=1"
+                alt="istanbul"
+                class="places-image"
+              />
+            </div>
+
+            <div class="places">
+              <div class="places-title">
+                <h1>Antalya</h1>
+              </div>
+
+              <img
+                src="https://www.yerelnet.org.tr/cdn/uploads/tatil-yerleri/kapak-280.jpeg"
+                alt="Antalya"
+                class="places-image"
+              />
+            </div>
+
+            <div class="places">
+              <div class="places-title">
+                <h1>Muğla</h1>
+              </div>
+
+              <img
+                src="https://i4.hurimg.com/i/hurriyet/75/750x0/5f23bc84c03c0e100481bc59.jpg"
+                alt="Muğla"
+                class="places-image"
+              />
+            </div>
+
+            <div class="places">
+              <div class="places-title">
+                <h1>Kapadokya</h1>
+              </div>
+
+              <img
+                src="https://sonmeztur.com/images/tour/1887_b.jpg"
+                alt="Kapadokya"
+                class="places-image"
+              />
+            </div>
+          </div>
+
+          <div class="flightCompanyTitle">
+            <h2>Airline Companies <i class="fa-solid fa-paper-plane"></i></h2>
+          </div>
+
+          <div class="flightCompany">
+            <div class="company">
+              <img
+                src="https://getlasso.co/wp-content/uploads/qatar-airways-logo.png"
+                alt="QatarAirways"
+                class="companyİmage"
+              />
+            </div>
+
+            <div class="company">
+              <img
+                onclick="anadoluJett()"
+                src="https://play-lh.googleusercontent.com/EnSlPRcsgEgQ2P80pHpqfVYbmrPgyo_MQqxDDkx2tbCyDRjHZPsP8BaeQ7i1vvtQBg"
+                alt="AnadoluJett"
+                class="companyİmage"
+              />
+            </div>
+
+            <div class="company">
+              <img
+                onclick="turkisAirline()"
+                src="https://cdn.trustindex.io/companies/fd/fd264134188gf80c/avatar.jpg"
+                alt="TürkHavaYolları"
+                class="companyİmage"
+              />
+            </div>
+
+            <div class="company">
+              <img
+                onclick="pegasus()"
+                src="https://i.pinimg.com/originals/08/d5/08/08d508384a9b9edc6ba356fd5172c616.png"
+                alt="Pegasus"
+                class="companyİmage"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-------------------Alert when inputs === null---------------->
+
+        <div class="alert">
+          <span><i class="fa-solid fa-circle-exclamation"></i></span>
+          <span class="message">
+            Warning : <span>From-To Boş Bırakılamaz</span>
+          </span>
+          <span><i class="fa-solid fa-circle-xmark"></i></span>
+        </div>
+
+        <!---------------------Bitiş------------------------------>
+
+        <!---Alert çıkış-->
+
+        <div class="main">
+          <!--Bildirim alarmı -->
+          <div class="modal-container">
+            <div class="modal">
+              <h2>Login <i class="fa-solid fa-right-to-bracket"></i></h2>
+
+              <p>Turkish Airlines Havayolları Teşekkürlerini Sunar</p>
+
+              <p>Çıkış Yap ?</p>
+
+              <div class="buttons">
+                <button class="cancel">Hayır</button>
+                <button class="ok">Evet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Flights.js"></script>
+  </body>
+</html>

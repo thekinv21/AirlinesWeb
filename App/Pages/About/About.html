@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <!--Css File-->
+    <link rel="stylesheet" href="./About.css" />
+    <!--Favİcon-->
+    <link rel="icon" type="image" href="/App/Image/flights.jpg" />
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="myContainer">
+      <div class="container">
+        <!----------------Navbar Başlangıç------------>
+        <div>
+          <nav class="navbar">
+            <img
+              class="logo"
+              src="/App/Image/logom.png"
+              alt="mylogo"
+              onclick="goHome()"
+            />
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-plane-departure"></i>
+                <a href="/App/Pages/Flights/SearchFlight/Flights.html"
+                  >FLİGHTS</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-ticket"></i>
+                <a href="http://127.0.0.1:5500/App/Pages/Tickets/Tickets.html"
+                  >MY TİCKETS</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="/App/Pages/About/About.html">ABOUT</a>
+              </li>
+
+              <li>
+                <i class="fa fa-fw fa-user"></i>
+                <a class="login">LOGIN</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!----------------Navbar Bitiş------------------->
+
+        <!--------------Headerd başlangıç---------------->
+
+        <div class="about-header">
+          <div class="about-header-title">
+            <p>
+              ANNOUNCING
+              <br />
+              COMFORTABLE FLİGHTS WİTH
+            </p>
+            <h1>Turkish Airlines</h1>
+          </div>
+
+          <div class="about-flight-button">
+            <p>NOW , WE ARE FAMİLY</p>
+
+            <button class="buy-ticket">Flight</button>
+          </div>
+        </div>
+
+        <!------------------Headerd Bitiş--------------------------->
+
+        <!--------------About info başlangıç---------------->
+
+        <div class="about-info">
+          <div class="about-title">
+            <h2 style="margin-bottom: 20px">Who we are ?</h2>
+
+            <p
+              style="
+                background: rgb(0, 0, 0, 0.3);
+                border-radius: 5px;
+                font-size: small;
+              "
+            >
+              Turkish Airlines , dünya çapında 15 milyondan fazla kullanıcısı ve
+              yüzden fazla ofisi bulunan lider bir Havayolları şirketidir. Ama
+              hepsinden en önemlisi, müşterilerimize komforlu ve güvenli uçuş
+              sunmaktır. Hızla büyüyoruz ve yakın zamanda sadece Türkiye'nin
+              değil Dünya çapında da en şirket olmaya adım adım ilerliyoruz ve
+              bu yolda sizin de bize katılmanıza sabırsızlanıyoruz!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------Alert çıkış------------------------>
+
+    <div class="main">
+      <!--Bildirim alarmı -->
+      <div class="modal-container">
+        <div class="modal">
+          <h2>Login <i class="fa-solid fa-right-to-bracket"></i></h2>
+
+          <p>Turkish Airlines Havayolları Teşekkürlerini sunar</p>
+
+          <p>Çıkış Yap ?</p>
+
+          <div class="buttons">
+            <button class="cancel">Hayır</button>
+            <button class="ok">Evet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------Alert çıkış Bitiş------------------------>
+
+    <script src="./About.js"></script>
+  </body>
+</html>

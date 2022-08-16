@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 250px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.navbar {
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 50px;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+  padding: 6px 16px;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+
+nav ul li i {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 18px;
+  color: lightgrey;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #edf0f1;
+  font-size: 15px;
+}
+
+.login {
+  cursor: pointer;
+}
+
+.ticket-search-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images7.alphacoders.com/347/thumb-1920-347314.jpg");
+  /* background-image: url("https://img.freepik.com/free-photo/airplane-sunset_1150-8338.jpg?w=1380&t=st=1660495381~exp=1660495981~hmac=8c45c18da800e2957e86a1efdfa7b4ad1b983f5ce364d39effdee05fafecda97"); */
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.ticket-search {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.ticket-container {
+  background-color: #37383b;
+  max-width: 980px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 80px auto;
+  border-radius: 5px;
+  color: #edf0f1;
+}
+
+.ticket-search-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.ticket-search-title i {
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.ticket-search-inputs {
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ticket-search-inputs p,
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.myText {
+  width: 40%;
+  height: 30px;
+  outline: none;
+  border: none;
+  max-width: 100%;
+  max-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 20px;
+  background: rgb(202, 134, 7);
+  color: #fff;
+}
+
+.myText::placeholder {
+  color: #edeef6;
+}
+
+/* Alert LogOut css */
+.main {
+  display: none;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: rgb(165, 5, 5);
+  color: #edeef6;
+  width: 550px;
+  height: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+  20% {
+    transform: translateY(5%);
+  }
+  40% {
+    transform: translateY(-5%);
+  }
+  80% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.modal h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.modal h2 i {
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.modal p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: medium;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+
+button {
+  width: 130px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}
+
+/* My Alert Box When İ add anything */
+
+.alert-warninng {
+  display: none;
+  background: red;
+  color: #fff;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  border-radius: 4px;
+  right: 15px;
+  top: 10%;
+  border-left: 8px solid #fff;
+  animation: show_alert 1s ease forwards;
+}
+
+.alert-warninng .fa-circle-exclamation {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+}
+
+.alert-warninng .message {
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.alert-warninng .message span {
+  margin-left: 10px;
+}
+/* Alert animation*/
+
+@keyframes show_alert {
+  20% {
+    transform: translateX(5%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+/* ticket container */
+
+.ucak-bilgileri-container {
+  width: 100%;
+  padding: 20px 20px;
+  display: none;
+}
+
+.bilgiler-container {
+  background-color: rgb(218, 120, 0);
+  width: 100%;
+  height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+ 
+}
+
+.ucak-bilgi-title {
+  padding-left: 10px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.ucak-bilgi-title i {
+  padding-left: 5px;
+  color: #fff;
+  font-size: medium;
+}
+
+.gidis-info {
+  background-color: #1d3746;
+  border-radius: 2px;
+  padding-left: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gidis-info label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gidis-info i , small i {
+  padding: 0px 5px 0px 5px;
+}
+
+.flight-date,
+.flight-time,
+.flight-seat {
+  padding-left: 5px;
+}
+
+.cizgi {
+  font-size: 25px;
+
+}
+
+.flight-info {
+  width: 100%;
+  display: flex;
+}
+
+.left-side {
+  float: left;
+  width: 40%;
+}
+
+.right-side {
+  float: right;
+  width: 60%;
+}
+
+.partner {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.partner-information {
+  display: flex;
+}
+
+.board-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lbl-tab {
+  margin-bottom: 5px;
+}
+
+.airlines-logo {
+  width: 35px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* ----------------Ticket dont found-------------------------------- */
+
+.ticket-bulunamadi-container {
+  width: 100%;
+  padding: 20px 20px;
+  display: none;
+}
+
+.ticket-bulunamadi {
+  background-color: rgb(218, 120, 0);
+  width: 100%;
+  height: 60px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-bulunamadi h2 i {
+  padding-right: 10px;
+}

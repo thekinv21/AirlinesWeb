@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background-image: url("https://img.freepik.com/free-photo/airplane-sunset_1150-8338.jpg?w=1380&t=st=1660495381~exp=1660495981~hmac=8c45c18da800e2957e86a1efdfa7b4ad1b983f5ce364d39effdee05fafecda97");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.plane-container {
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.plane {
+  margin: 0px auto;
+  max-width: 400px;
+  padding-top: 20px;
+}
+
+.front-side {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid #d8d8d8;
+}
+
+.front-side::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  border-radius: 50%;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+
+.front-side::after {
+  color: black;
+}
+
+.front-side h1 {
+  width: 60%;
+  margin: 100px auto 35px auto;
+  font-size: 20px;
+}
+
+.front-side h1 .fa-user-group {
+  font-size: 50px;
+  color: #d8d8d8;
+}
+
+.exits {
+  position: relative;
+  height: 50px;
+
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exits span {
+  background-color: green;
+  width: 60px;
+  height: 20px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.exits span .left {
+  padding-left: 10px;
+}
+
+.exits span .right {
+  padding-right: 10px;
+}
+
+.cabin {
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.seat {
+  display: flex;
+  flex: 0 0 14.28571428571429%;
+  padding: 5px;
+  position: relative;
+}
+
+.seat:nth-child(3) {
+  margin-right: 14.28571428571429%;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.seats-form,
+.reserved,
+.selected {
+  width: 70%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding: 4px 0;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ------------------rezerve edilenler hariç hover----------------------*/
+.seats-form:not(.reserved):hover {
+  transition: 0.5s all ease;
+  transform: scale(1.1);
+}
+
+.selected {
+  background: green;
+  color: #fff;
+}
+
+.reserved {
+  background: red;
+  color: #fff;
+}
+
+/*--------------------------- koltukların durumu------------------------- */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  margin: 0px 15px;
+}
+
+.seat_select,
+.seat_reserved,
+.seat_empty {
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+}
+
+.seat_select {
+  background-color: green;
+}
+.seat_reserved {
+  background-color: red;
+}
+
+/* --------------------onayla button---------------- */
+.confirm {
+  margin-top: 5px;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.confirm-btn {
+  height: 35px;
+  width: 210px;
+  background-color: red;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.confirm-btn:hover {
+  transition: 0.5s all ease;
+  transform: scale(1.1);
+}
+
+/*-------------------- Alert window------------------------ */
+
+.main {
+  display: none;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: rgb(165, 5, 5);
+  color: #edeef6;
+  width: 550px;
+  height: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+  20% {
+    transform: translateY(5%);
+  }
+  40% {
+    transform: translateY(-5%);
+  }
+  80% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.modal h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.modal h2 i {
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.modal p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: medium;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+
+button {
+  width: 130px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}

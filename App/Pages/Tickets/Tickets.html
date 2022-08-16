@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tickets</title>
+    <!--Css File-->
+    <link rel="stylesheet" href="./Tickets.css" />
+    <!--Favicon-->
+    <link
+      rel="shortcut icon"
+      href="/App/Image/flights.jpg"
+      type="image/x-icon"
+    />
+    <!--Fontawesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="ticket-search-container">
+      <div class="ticket-search">
+        <div>
+          <nav class="navbar">
+            <img
+              class="logo"
+              src="/App/Image/logom.png"
+              alt="mylogo"
+              onclick="goHome()"
+            />
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-plane-departure"></i>
+                <a href="/App/Pages/Flights/SearchFlight/Flights.html"
+                  >FLİGHTS</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-ticket"></i>
+                <a href="http://127.0.0.1:5500/App/Pages/Tickets/Tickets.html"
+                  >MY TİCKETS</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="/App/Pages/About/About.html">ABOUT</a>
+              </li>
+             
+              <li>
+                <i class="fa fa-fw fa-user"></i>
+                <a class="login">LOGIN</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="ticket-container">
+          <div class="ticket-search-title">
+            <i class="fa-solid fa-cart-plus"></i>
+            <h2>Bilet İşlemleri</h2>
+          </div>
+
+          <div class="ticket-search-inputs">
+            <p>Buradan Biletinizin Detaylarına Bakabilirsiniz</p>
+
+            <form>
+              <input
+                class="myText"
+                type="text"
+                id="pnr"
+                placeholder="Rezervasyon Kodu(PNR)"
+                autocomplete="off"
+                required
+              />
+              <input
+                id="surname"
+                class="myText"
+                type="text"
+                placeholder="Yolcunun Soyadı"
+                autocomplete="off"
+                required
+              />
+              <button id="devam">Devam</button>
+            </form>
+
+            <!---------------------Uçak bilgiler----------------------------->
+
+            <div class="ucak-bilgileri-container">
+              <div class="bilgiler-container">
+                <div class="ucak-bilgi-title">
+                  <label> Fligth İnformation</label>
+                  <i class="fa-solid fa-plane"></i>
+                </div>
+
+                <div class="gidis-info">
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-user"></i> Person Name :
+                    </span>
+                    <small class="flight-personName">
+                      <!--Date Flight-->
+                    </small>
+                  </label>
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-user"></i>
+                      Person Surname :
+                    </span>
+                    <small class="flight-personSurname"> <!----> </small>
+                  </label>
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-ticket"></i>
+                      Ticket Pnr :
+                    </span>
+                    <small class="flight-ticketPnr"> <!----> </small>
+                  </label>
+                </div>
+
+                <div class="gidis-info">
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-calendar-days"></i>
+                      Flight Date :
+                    </span>
+                    <small class="flight-date"> <!--Date Flight--> </small>
+                  </label>
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-clock"></i>
+                      Flight Time :
+                    </span>
+                    <small class="flight-time"> <!----> </small>
+                  </label>
+
+                  <label>
+                    <span>
+                      <i class="fa-solid fa-plane-up"></i>
+                      Flight Seat :
+                    </span>
+                    <small class="flight-seat"> <!----> </small>
+                  </label>
+                </div>
+
+                <div class="flight-info">
+                  <div class="left-side">
+                    <span>
+                      <div class="partner-information">
+                        <img
+                          class="airlines-logo"
+                          src="https://seeklogo.com/images/T/turkish-airlines-logo-25BACC2D0C-seeklogo.com.png"
+                          alt="logo"
+                        />
+                        <span class="board-information">
+                          <small id="partner" class="lbl-tab"> </small>
+                          <small id="board"> <!--Here Js codes--> </small>
+                        </span>
+                      </div>
+                    </span>
+                  </div>
+
+                  <div class="right-side">
+                    <span class="partner">
+                      <span class="board-information">
+                        <small class="lbl-tab" id="fromairport">
+                          <!--Here Js codes-->
+                        </small>
+                        <small>
+                          <small id="fromlocation"><!--Here Js codes--></small>
+                        </small>
+                      </span>
+
+                      <strong class="cizgi">&#8594;</strong>
+
+                      <span class="board-information">
+                        <small class="lbl-tab" id="toairport">
+                          <!--Here Js codes-->
+                        </small>
+                        <small>
+                          <small id="tolocation"><!--Here Js codes--></small>
+                        </small>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!---------------------Bitiiş kısmı-------------------->
+
+            <!------------Bilet bulamama kısmı başlangıç-------------------->
+
+            <div class="ticket-bulunamadi-container">
+              <div class="ticket-bulunamadi">
+                <div>
+                  <h2>
+                    <i class="fa-solid fa-ticket"></i>
+                    Bilet Bulunmamaktadir
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!---------------------Bitiiş kısmı-------------------->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Alert when inputs === null-->
+
+    <div class="alert-warninng">
+      <span><i class="fa-solid fa-circle-exclamation"></i></span>
+      <span class="message">
+        Warning : <span>PNR ve SOYAD Alanlarını Doldurunuz</span>
+      </span>
+    </div>
+
+    <!------------------------Alert çıkış------------------------>
+
+    <div class="main">
+      <!--Bildirim alarmı -->
+      <div class="modal-container">
+        <div class="modal">
+          <h2>Login <i class="fa-solid fa-right-to-bracket"></i></h2>
+
+          <p>Turkish Airlines Havayolları Teşekkürlerini Sunar</p>
+
+          <p>Çıkış Yap ?</p>
+
+          <div class="buttons">
+            <button class="cancel">Hayır</button>
+            <button class="ok">Evet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Tickets.js"></script>
+  </body>
+</html>

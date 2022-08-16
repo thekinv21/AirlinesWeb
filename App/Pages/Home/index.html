@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Airlines Web Site</title>
+    <!--Favİcon-->
+    <link rel="icon" type="image" href="/App/Image/flights.jpg" />
+
+    <!--Css File-->
+    <link rel="stylesheet" href="../Home/index.css" />
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="/App/Image/video.mp4" type="video/mp4" />
+      </video>
+
+      <nav>
+        <img class="logo" src="/App/Image/logom.png" alt="mylogo" />
+
+        <ul>
+          <li>
+            <i class="fa-solid fa-plane-departure"></i>
+            <a href="/App/Pages/Flights/SearchFlight/Flights.html">FLİGHTS</a>
+          </li>
+          <li>
+            <i class="fa fa-ticket"></i>
+            <a href="/App/Pages/Tickets/Tickets.html">MY TİCKETS</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-address-card"></i>
+            <a href="/App/Pages/About/About.html">ABOUT</a>
+          </li>
+       
+          <li>
+            <i class="fa fa-fw fa-user"></i>
+            <a class="login">LOGIN</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <h1 class="title">Turkish Airlines</h1>
+        <a href="/App/Pages/Flights/SearchFlight/Flights.html"> Travel </a>
+      </div>
+    </div>
+
+    <!---Alert çıkış-->
+
+    <div class="main">
+      <!--Bildirim alarmı -->
+      <div class="modal-container">
+        <div class="modal">
+          <h2>Login <i class="fa-solid fa-right-to-bracket"></i></h2>
+
+          <p>Turkish Airlines Havayolları Teşekkürlerini Sunar</p>
+
+          <p>Çıkış Yap ?</p>
+
+          <div class="buttons">
+            <button class="cancel">Hayır</button>
+            <button class="ok">Evet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

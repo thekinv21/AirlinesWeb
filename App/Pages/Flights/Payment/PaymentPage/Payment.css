@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: beige;
+  
+}
+
+.containerFull {
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  background-image: url("https://img.freepik.com/free-photo/airplane-sunset_1150-8338.jpg?w=1380&t=st=1660495381~exp=1660495981~hmac=8c45c18da800e2957e86a1efdfa7b4ad1b983f5ce364d39effdee05fafecda97");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.payment-container {
+  margin: 0 auto;
+  padding: 0 0.5em;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.payment-container .left {
+  float: left;
+  width: 50%;
+  border-radius: 5px;
+  background-color: rgb(0,0,0,0.5);
+  border: 0.5px solid beige;
+}
+
+.left h2,
+.right h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.payment-container .right {
+  float: right;
+  width: 35%;
+  background-color: rgb(0,0,0,0.5);
+  border: 0.5px solid beige;
+ 
+  border-radius: 5px;
+  display: none;
+}
+
+.ucak-bilgileri-container {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.bilgiler-container {
+  background-color: rgb(218, 120, 0);
+  width: 100%;
+  height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  /* display: none; */
+}
+
+.ucak-bilgi-title,
+.people-bilgi-title,
+.contact-bilgi-title {
+  padding-left: 10px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.ucak-bilgi-title i,
+.people-bilgi-title i,
+.contact-bilgi-title i {
+  padding-left: 5px;
+  color: #fff;
+  font-size: medium;
+}
+
+.gidis-info {
+  background-color: #1d3746;
+  border-radius: 2px;
+  padding-left: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gidis-info label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.flight-date,
+.flight-time,
+.flight-seat {
+  padding-left: 5px;
+}
+
+.cizgi {
+  font-size: 25px;
+  display: none;
+}
+
+.flight-info {
+  width: 100%;
+  display: flex;
+}
+
+.left-side {
+  float: left;
+  width: 40%;
+}
+
+.right-side {
+  float: right;
+  width: 60%;
+}
+
+.partner {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.partner-information {
+  display: flex;
+}
+
+.board-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lbl-tab {
+  margin-bottom: 5px;
+}
+
+.airlines-logo {
+  width: 35px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* print ticket ve save button içerigi */
+
+.next-show-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+  margin-bottom: 20px;
+}
+
+.next-show-buttons .show:hover,
+.saveAll:hover {
+  transition: 0.5s all ease;
+  transform: scale(1.1);
+}
+
+.next-show-buttons .show {
+  margin-right: 30px;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: rgb(31, 141, 31);
+  color: rgb(250, 250, 250);
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.next-show-buttons .saveAll {
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #006ce0;
+  color: rgb(250, 250, 250);
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+/*----------------- Person bilgiler içerigi-------------*/
+
+.person-contact,
+.people-bilgi {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: small;
+}
+.hizala {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px;
+}
+
+.hizala small {
+  margin-bottom: 5px;
+}
+
+.hizala input {
+  width: 100%;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  max-width: 100%;
+  max-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 10px;
+}
+
+.gender {
+  width: 50%;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.personGender{
+  display: none;
+}
+
+.gender input {
+
+  margin: 5px 5px 5px 10px;
+
+}
+
+/*------------------------ Payment içerigi------------------------------- */
+.payment-bank-kredi-kart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.right .banka-kart {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid red;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.right .banka-kart::placeholder {
+  color: red;
+  font-family: "Montserrat", sans-serif;
+}
+
+.payment-bank-kredi-kart .banks-icon {
+  width: 75%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.right span {
+  padding: 0px 0px 10px 20px;
+  font-weight: 500;
+  font-size: small;
+  color: #fff;
+}
+
+.payment-kart {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 0px 20px 0px;
+}
+
+.kredi-kart {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid red;
+  outline: none;
+  padding-left: 20px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.payment-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.payment-button {
+  border-radius: 0.31em;
+  background: rgb(31, 141, 31);
+  color: #fff;
+  width: 70%;
+  height: 3.31em;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 30px 0px 30px 0px;
+}
+
+.payment-button i {
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+button {
+  width: 130px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}
+
+/* ---------------------------------------------------*/
+
+
+/* ----------------My Alert Box When İ add anything -------------------------*/
+
+.alert-warninng {
+  display: none;
+  background: red;
+  color: #fff;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  border-radius: 4px;
+  right: 15px;
+  top: 10%;
+  border-left: 8px solid #fff;
+  animation: show_alert 1s ease forwards;
+}
+
+.alert-warninng .fa-circle-exclamation {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+}
+
+.alert-warninng .message {
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.alert-warninng .message span {
+  margin-left: 10px;
+}
+/* Alert animation*/
+
+@keyframes show_alert {
+  20% {
+    transform: translateX(5%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+/*------------------ alert onay kısmı------------------------- */
+
+
+.alert-main {
+  display: none;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: rgb(165, 5, 5);
+  color: #edeef6;
+  width: 550px;
+  height: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+  20% {
+    transform: translateY(5%);
+  }
+  40% {
+    transform: translateY(-5%);
+  }
+  80% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.modal h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.modal h2 i {
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.modal p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: medium;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+button {
+  width: 130px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <!--Css Link-->
+    <link rel="stylesheet" href="./Payment.css" />
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <!--Favİcon Link-->
+    <link rel="icon" type="image" href="/App/Image/flights.jpg" />
+  </head>
+  <body>
+    <div class="main">
+
+      <div class="containerFull">
+        <form class="payment-container">
+          <!--Containeri sag sol olarak böldüm-->
+          <!--Solda bilgiler Sağda ise Credi Card Bilgileri-->
+  
+          <div class="left">
+            <h2>All information</h2>
+            <!--Ticket information Blok-->
+            <div class="ucak-bilgileri-container">
+              <div class="bilgiler-container">
+                <div class="ucak-bilgi-title">
+                  <label> Fligth İnformation</label>
+                  <i class="fa-solid fa-plane"></i>
+                </div>
+  
+                <div class="gidis-info">
+                  <label>
+                    <span> Flight Date : </span>
+                    <small class="flight-date"> <!--Date Flight--> </small>
+                  </label>
+                  <label>
+                    <span> Flight Time : </span>
+                    <small class="flight-time"> <!----> </small>
+                  </label>
+  
+                  <label>
+                    <span> Flight Seat : </span>
+                    <small class="flight-seat"> <!----> </small>
+                  </label>
+                </div>
+  
+                <div class="flight-info">
+                  <div class="left-side">
+                    <span>
+                      <div class="partner-information">
+                        <img
+                          class="airlines-logo"
+                          src="https://seeklogo.com/images/T/turkish-airlines-logo-25BACC2D0C-seeklogo.com.png"
+                          alt="logo"
+                        />
+                        <span class="board-information">
+                          <small id="partner" class="lbl-tab"
+                            >Turkish Airlines
+                          </small>
+                          <small id="board"> <!--Here Js codes--> </small>
+                        </span>
+                      </div>
+                    </span>
+                  </div>
+  
+                  <div class="right-side">
+                    <span class="partner">
+                      <span class="board-information">
+                        <small class="lbl-tab" id="fromairport">
+                          <!--Here Js codes-->
+                        </small>
+                        <small id="fromlocation"><!--Here Js codes--></small>
+                      </span>
+  
+                      <strong class="cizgi">&#8594;</strong>
+  
+                      <span class="board-information">
+                        <small class="lbl-tab" id="toairport"
+                          ><!--Here Js codes-->
+                        </small>
+                        <small id="tolocation"><!--Here Js codes--></small>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--------------Kişi verileri ---------------------->
+  
+            <div class="ucak-bilgileri-container">
+              <div class="bilgiler-container">
+                <div class="people-bilgi-title">
+                  <label> People İnformation</label>
+                  <i class="fa-solid fa-id-card"></i>
+                </div>
+  
+                <div class="people-bilgi">
+                  <div class="hizala">
+                    <small for="name">Ad</small>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Yolcu adı"
+                      maxlength="11"
+                      required
+                    />
+                  </div>
+  
+                  <div class="hizala">
+                    <small for="surname">Soyad</small>
+                    <input
+                      type="text"
+                      id="surname"
+                      placeholder="Soyadı"
+                      maxlength="16"
+                      required
+                    />
+                  </div>
+  
+                  <div class="hizala">
+                    <small for="birthday"> Doğum Tarihi</small>
+                    <input
+                      type="date"
+                      id="birthday"
+                      placeholder="10/06/2000"
+                      maxlength="6"
+                      required
+                    />
+                  </div>
+  
+                  <div class="hizala">
+                    <small for="tc">Tc Kimlik</small>
+                    <input
+                      type="text"
+                      id="tc"
+                      placeholder="Kimlik"
+                      maxlength="12"
+                      required
+                    />
+                  </div>
+                </div>
+  
+                <div class="gender">
+  
+                  <input type="radio" name="gender" value="Erkek">Erkek<br>
+                  <input type="radio" name="gender" value="Kadın">Kadın<br>
+                  <p id="result" class="personGender"><!----Here js code gender--></p>
+  
+  
+                </div>
+              </div>
+            </div>
+  
+            <!----------------Contact information Blok----------------------->
+  
+            <div class="ucak-bilgileri-container">
+              <div class="bilgiler-container">
+                <div class="contact-bilgi-title">
+                  <label> Contact İnformation</label>
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+  
+                <div class="person-contact">
+                  <div class="hizala">
+                    <small for="email">E-mail</small>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="E-mail"
+                      required
+                    />
+                  </div>
+  
+                  <div class="hizala">
+                    <small for="phone">Phone Number</small>
+                    <input
+                      type="tel"
+                      id="phone"
+                      placeholder="05*****"
+                      maxlength="11"
+                      required
+                    />
+                  </div>
+  
+                  <div class="hizala">
+                    <small for="home-phone">Home Phone Number</small>
+                    <input
+                      type="tel"
+                      id="home-phone"
+                      placeholder="02*****"
+                      maxlength="11"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Devam ve Save Buttonlar-->
+  
+            <div class="next-show-buttons">
+              <button class="show">Print Ticket</button>
+              <button class="saveAll"> Save All </button>
+            </div>
+          </div>
+  
+          <!--Credi Card Block ve Ödeme-->
+  
+          <div class="right">
+            <h2>Payment</h2>
+  
+            <div class="payment-bank-kredi-kart">
+              <input
+                class="banka-kart"
+                type="text"
+                placeholder="Banka / Kredi Kartı"
+                readonly
+              />
+            </div>
+  
+            <div class="payment-bank-kredi-kart">
+              <img
+                class="banks-icon"
+                src="https://s3.eu-central-1.amazonaws.com/static.obilet.com/images/web/cards-782.png"
+                alt="banka-kart"
+              />
+            </div>
+  
+            <span>Kart Numarası</span>
+  
+            <div class="payment-kart">
+              <input
+                class="kredi-kart"
+                id="kart-numara"
+                type="text"
+                placeholder="**** **** ***** *****"
+                maxlength="16"
+              />
+            </div>
+  
+            <span>Son Kullanım Tarihi</span>
+  
+            <div class="payment-kart">
+              <input
+                class="kredi-kart"
+                id="son-kullanim-tarihi"
+                type="text"
+                placeholder="10/2023"
+                maxlength="7"
+              />
+            </div>
+  
+            <span>Cvc2</span>
+  
+            <div class="payment-kart">
+              <input
+                class="kredi-kart"
+                id="cvc"
+                type="text"
+                placeholder="Cvc"
+                maxlength="3"
+              />
+            </div>
+  
+            <div class="payment-btn">
+              <button class="payment-button">
+                 <i class="fa-solid fa-credit-card"></i>
+                  Güvenli Şekilde Ödeme Yap
+                </button>
+            </div>
+  
+          </div>
+          </div>
+        </form>
+      </div>
+     
+    </div>
+
+    <!--Alert complate  hmtl-->
+    <div class="alert-main">
+      <!--Bildirim alarmı -->
+      <div class="modal-container">
+        <div class="modal">
+          <h2>Alert <i class="fa-solid fa-bell"></i></h2>
+
+          <p>
+              Bizi tercih ettiğiniz için Teşekkür ederiz
+              <p>Ödeme işlemini Onaylıyor musunuz ?</p>
+          </p>
+
+          
+
+          <div class="buttons">
+            <button class="iptal">İptal Et</button>
+            <button class="onay">Onayla</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <!--Alert when inputs === null-->
+
+     <div class="alert-warninng">
+      <span><i class="fa-solid fa-circle-exclamation"></i></span>
+      <span class="message"> Warning :  <span>Lütfen Bütün Alanları Doldurunuz</span> </span>
+   
+    </div>
+
+    
+
+    <script src="./Payment.js"></script>
+
+  </body>
+</html>
