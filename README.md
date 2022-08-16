@@ -1,5 +1,5 @@
 0) AirlinesWeb Using Html/Css and Javascript
-1) Sayfalar oluşturuldu #Flight #Home #About #Login #Payment #ComplatePayment #SelecySeat #MyTicket
+1) Sayfalar oluşturuldu #Flight #Home #About #Login #Payment #ComplatePayment #SelectSeat #MyTicket
 2) Bilet arama kısmı oluşturuldu ve veriler datalardan çekildi
 3) Datalar Data.json dan çekildi
 4) Uçak koltukları oluşturuldu ve seçtirildi
