@@ -7,6 +7,6 @@
 6) Kişi verilerine göre Email gönderiliyor ve her kişiye ayrı Pnr numara gönderiliyor
 7) Pnr numaraya göre aldığı biletin detaylarına bakılabiliyor
 8) kişi verileri ve bilet verileri localeStorage da saklanıyor
-9) Tek sorun şu : Bilet arama yaparken Baş harfi büyük girmelisiniz
+9) Tek sorun şu : Bilet arama yaparken Baş harfi büyük girmelisiniz bunu toUpperCase ile çok farklı yolları denedim ama olmadı Css ile capitalize yöntemide işe yaramadı
 10) Farklı kütüphaneler kullanıldı Alertleri kendi elimle yazdım Ps : display : none Silersen gözükür
 11) Airlinesweb projesi 1 haftadan fazla zamanımı aldı ve bir şeyler ekleyebilirseniz sevinirim
