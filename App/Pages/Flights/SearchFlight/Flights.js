@@ -89,13 +89,10 @@ searchBtn.addEventListener(
 
           veriJson.FlightData.forEach((element) => {
             /* döngü ile datalara eriştim */
-            if (element.from === fromİnput.value) {
-              if (element.to === toİnput.value) {
-                if (element.tarih === flightDate.value) {
+            if (element.from.toUpperCase() === fromİnput.value.toUpperCase() && 
+                element.to.toUpperCase() === toİnput.value.toUpperCase() && 
+                element.tarih.toUpperCase() === flightDate.value.toUpperCase()) 
                   eslesenler.push(element);
-                }
-              }
-            }
           });
 
           block.style.display = "none";
