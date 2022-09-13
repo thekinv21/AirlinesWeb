@@ -10,7 +10,8 @@
 9) Tek sorun şu : Bilet arama yaparken Baş harfi büyük girmelisiniz bunu toUpperCase ile çok farklı yolları denedim ama olmadı Css ile capitalize yöntemide işe yaramadı
 10) Farklı kütüphaneler kullanıldı Alertleri kendi elimle yazdım Ps : display : none Silersen gözükür
 11) Airlinesweb projesi 1 haftadan fazla zamanımı aldı ve bir şeyler ekleyebilirseniz sevinirim
-![home](https://user-images.githubusercontent.com/92122363/189913411-949d7461-e917-4fd0-a03d-f4d059b34977.png)
+
+![home](https://user-images.githubusercontent.com/92122363/189914833-24fe9786-0e30-4c77-8fd0-b858ae608dac.png)
 
 ![search](https://user-images.githubusercontent.com/92122363/189913481-42c7ee72-a91f-4ea2-8d72-c52deb1959f6.png)
 
