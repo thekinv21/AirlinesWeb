@@ -58,7 +58,7 @@ seatContainer.addEventListener(
               );
 
               window.location.href =
-                "http://127.0.0.1:5500/App/Pages/Flights/Payment/PaymentPage/Payment.html";
+                "/App/Pages/Flights/Payment/PaymentPage/Payment.html";
             })
           );
 

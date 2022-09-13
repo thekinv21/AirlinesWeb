@@ -1,6 +1,6 @@
 const goHome = () => {
   window.location.href =
-    "http://127.0.0.1:5500/App/Pages/Home/index.html"; /* go to homaPage*/
+    "/App/Pages/Home/index.html"; /* go to homaPage*/
 };
 
 const AracKirala = () => {
@@ -54,7 +54,7 @@ loginOut.addEventListener(
       "click",
       (logincik = () => {
         window.location.href =
-          "http://127.0.0.1:5500/App/Pages/Login/Login.html";
+          "/App/Pages/Login/Login.html";
       })
     );
 
@@ -200,7 +200,7 @@ searchBtn.addEventListener(
                 );
 
                 window.location.href =
-                  "http://127.0.0.1:5500/App/Pages/Flights/SelectSeat/SelectSeat.html";
+                  "/App/Pages/Flights/SelectSeat/SelectSeat.html";
               })
             );
 

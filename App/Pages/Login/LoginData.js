@@ -13,7 +13,7 @@ const Login = (e) => {
 
     if (inputUsername.value === userName && inputPassword.value === passWord) {
         
-        window.location.href = "http://127.0.0.1:5500/App/Pages/Home/index.html"
+        window.location.href = "/App/Pages/Home/index.html"
     }
 
     else {

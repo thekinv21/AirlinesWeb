@@ -163,7 +163,7 @@ saveAllbtn.addEventListener(
                 localStorage.setItem("myTicket", JSON.stringify(myTicket));
 
                 window.location.href =
-                  "http://127.0.0.1:5500/App/Pages/Flights/Payment/PaymentComplate/Complate.html";
+                  "/App/Pages/Flights/Payment/PaymentComplate/Complate.html";
               })
             );
 

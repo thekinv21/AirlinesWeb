@@ -13,7 +13,7 @@ loginOut.addEventListener(
       "click",
       (logincik = () => {
         
-        window.location.href = "http://127.0.0.1:5500/App/Pages/Login/Login.html"
+        window.location.href = "/App/Pages/Login/Login.html"
 
       })
     );

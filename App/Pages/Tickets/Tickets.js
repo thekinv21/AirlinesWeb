@@ -1,7 +1,7 @@
 // go homepage when click logo//
 const goHome = () => {
   window.location.href =
-    "http://127.0.0.1:5500/App/Pages/Home/index.html"; /* go to homaPage*/
+    "/App/Pages/Home/index.html"; /* go to homaPage*/
 };
 
 //logOut alert
@@ -109,7 +109,7 @@ loginOut.addEventListener(
       "click",
       (logincik = () => {
         window.location.href =
-          "http://127.0.0.1:5500/App/Pages/Login/Login.html";
+          "/App/Pages/Login/Login.html";
       })
     );
 
